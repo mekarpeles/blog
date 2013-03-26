@@ -1,0 +1,263 @@
+$def with ()
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mek's Blog</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" rel="stylesheet">
+    <meta name="description" content="A hub for hacker culture">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/static/css/style.css"/>
+  </head>
+  
+  <body>
+    <div id="topbar" class="shadow">
+      <div id="topbar-inner">
+	<a href="/">Home</a>
+	<a href="http://www.github.com/mekarpeles">Github</a>
+	<a href="http://www.twitter.com/MichaelKarpeles">Twitter</a>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <img class="avatar" src="https://secure.gravatar.com/avatar/7ca82283af0b65b163dde4f5f5e3fb41?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"/>
+      <a href="http://www.github.com/mekarpeles"><span class="name">mek</a> <span class="fullname">(Michael E. Karpeles)</span>
+    </div>
+
+    $# 3 stages of development (1) find data people want / value -- analytics, etc, (2) find out how to maximize the data's value + refine it (DM/AA, Dedupe, ML, Stats), (3) Interface - accessibility, consumability, apis, reduce friction.
+
+$#    <div class="container">
+$#      <h1 class="repos">'No space left of device' but disk isn't full?</h1>
+$#      <p class="by">Mek, September 19, 2012</p>
+$#      <hr/>
+$#
+$#      <h2>Possibility 1: Out of inodes</h2>
+$#      <p>
+$#	One possible reason for encountering a 'No space left on
+$#	device' error is your machine has run out of
+$#	available <a href="http://en.wikipedia.org/wiki/Inode">inodes</a>.
+$#      </p>
+$#
+$#      <h3>What is an inode?</h3>
+$#      <p>
+$#	Many Unix file systems use data structures called inodes whose
+$#	purpose is to store file metadata. Each file refers to its
+$#	inode data via an i-number (inode number). The inode data
+$#	structure typically stores information like about files and
+$#	directories (folders), such as file ownership, access mode
+$#	(read, write, execute permissions), and file type.
+$#      </p>
+$#
+$#      <p>
+$#	On many types of file system implementations, the maximum
+$#	number of inodes is fixed at file system creation, limiting
+$#	the maximum number of files the file system can hold. A
+$#	typical allocation heuristic for inodes in a file system is
+$#	one percent of total size. <a href="http://en.wikipedia.org/wiki/Inode#Details">[1]</a><a href="[http://en.wikipedia.org/wiki/Inode#Practical_considerations]"[2]</a>
+$#      </p>
+$#
+$#      <code>sudo find . -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n</code>	
+$#
+$#      <p>tune2fs -m</p>
+$#      <p>df -i</p>
+$#
+$#      <p>If you have recently deleted file</p>
+$#      <p>
+$#	<code>
+$#	  $# post about df -i space (inodes)
+$#	  $# post about 
+$#	</code>
+$#      </p>
+$#      <p>Additional resource</p>
+$#      <ul>
+$#	<li><a href="http://superuser.com/questions/310076/linux-no-space-left-on-device-error-with-50-free-space">(superuser.com) Linux: no space left on device error with 50% free space</a></li>
+$#      </ul>
+$#
+$#    </div>
+
+    <div class="container">
+      <h1 class="repos"><a name="openjournal">OpenJournal</a></h1>
+      <p class="by">Mek, October 22, 2012</p>
+      <hr/>     
+      <h2>Alpha Launch</h2>
+      <p>
+	I'm proud to announce the &alpha;-launch
+	of <span style="padding: 5px; background-color:	#ff7;">
+	  <a style="color: blue;" href="http://michaelkarpeles.com:1337"><strong>OpenJournal</strong></a>
+	- A community
+	for <strong>sharing</strong>, <strong>discussing</strong>,
+	and <strong>curating</strong> the world's
+	best <strong>computer science, academic
+	papers</strong></span>. OpenJournal is a non-proffit service
+	which aims to help progress the field of computer science by
+	(1) making CS research accessible to the public, faster and
+	(2) providing an interface which facilitates discovery of new
+	relevant, novel, and impactful papers. This is accomplished,
+	in part, by enabling our community to rank/vote and commment
+	on papers.
+      </p>
+
+
+
+      <h3>What's next?</h3>
+      <p>Our vision doesn't just apply to information collection and
+	retrieval. Over time, it is our intention to influence,
+	reform, and improve the actual academic journal-writing
+	process in three ways: (1) to increase the overall quality of
+	papers, (2) to increase distributed, collaborative efforts around the
+	world, and (3) to increase the rate at which papers are
+	co-developed and improved. These objectives require attacking key
+	aspects like making papers <strong>implementable</strong>,
+	<strong>testable</strong>, <strong>forkable</strong> (like git forking),
+	<strong>searchable</strong>, <strong>annotatable</strong>
+	and most importantly.
+      </p>
+
+      <h2>Join the Club</h2>
+      <p>OpenJournal is brought to you by
+      the <a href="http://angelhack.hackathon.io/hacks/view/24">Lambda
+      Herders</a>; a team of computer scientists and entrepreneurs
+      from the San Francisco Bay area. We are in the process of
+      coordinating partnerships and sponsorships with several of the
+      nationals top CS schools and research
+      facilities. Please <a href="mailto:michael.karpeles@gmail.com">contact
+      us</a> if you are interested in getting involved. Special thanks
+      to <a href="http://www.eecis.udel.edu/~ypeng/">Yifan
+      Peng</a>, <a href="http://www.peterdowns.com">Peter L
+      Downs</a>, <a href="http://zv.github.com/">Zephyr
+      Pellerin</a>, <a href="http://stephenbalaban.com">Stephen
+      Balaban</a>, <a href="https://www.facebook.com/cAnthonyTucci">Chris
+      Tucci</a>, <a href="https://www.facebook.com/44616E20436F7465">Dan
+      Cote</a>.
+
+      <h3>Are you a...</h3>
+      
+	<ul>
+	  <li>Knowledgeable computer scientist? <strong>Contribute or <a href="http://michaelkarpeles.com:1337/submit">Submit a paper</a></strong>?</li> 
+	  <li>Passionate, patient academic? <strong><a href="mailto:michael.karpeles@gmail.com">Apply</a> to review and vett submitted papers</strong></li>
+	  <li>University, Corporation, or Research
+	  Facility? <a href="mailto:michael.karpeles@gmail.com"><strong>Become
+	  a Sponsor</strong></a> and support our efforts with <strong>permission to 
+	  use papers, donating servers, faculty time</strong>
+	</ul>
+      </p>
+	
+    </div>
+
+    <div class="container">
+      <h1 class="repos"><a href="/lazydb">LazyDB</a></h1>
+      <p class="by">Mek, September 19, 2012</p>
+      <hr/>
+      <p>
+	LazyDB is a basic wrapper around the Python <code>shelve</code> flatfile
+	dbm module. LazyDB provides a couchdb/S3 like layer of
+	abstraction around shelve, allowing convenient access (read
+	and write) to shelve without sacrificing the convenience of
+	writing pickled python objects to disk.
+      </p>
+
+      <p>
+	From the <code>help(shelve)</code> documentation: A "shelf" is a
+	persistent, dictionary-like object. The difference with dbm
+	databases is that the values (not the keys!) in a shelf can be
+	essentially arbitrary Python objects -- anything that the
+	"pickle" module can handle. This includes most class
+	instances, recursive data types, and objects containing lots
+	of shared sub-objects. The keys are ordinary strings.
+      </p>
+      
+      <p>
+	Disclaimer: I wouldn't suggest using this module for
+	production projects as I predict it having difficulty
+	scaling. LazyDB is ideal for supporting smaller projects with
+	light data in which the programmer must move quickly and
+	intends to implement an alternate db solution sooner rather
+	than later. The intent is to provide a more elegant interface
+	for utilizing the shelve module, not to create an efficient
+	replacement.
+      </p>
+
+      <p><a href="http://pypi.python.org/pypi/LazyDB#downloads">Coming soon</a></p>
+    </div>
+
+    <div class="container">
+      <h1>A Greyhat's Doctrine</h1>
+      <p class="by">Mek, September 18, 2012</p>
+      <hr/>
+      <p>Enthusiasm is a powerful feeling. It can motivate us to act
+	impulsively, to overcome shyness, and drive us insistently to
+	persevere. However, enthusiasm, like a drug, comes in
+	different doses and has side effects; both good and
+	bad. Enthusiasm can blur one's vision, causing the boundaries
+	which define our principles to bend, bleed, and distort. On
+	one hand, it may give us the courage to step outside our
+	comfort level, to experiment with / find exceptions (or
+	deviations) within our belief system. However, it can also
+	drive us to lose perspective, become desensitized, and impair
+	our ability to think objectively.</p>
+
+      <p>Like symbolic logic systems, our thought process is governed
+	by a set of axioms. These axioms represent our fundamental
+	beliefs of how the universe works and are derived from our
+	knowledge base of experiences and learnings. We hold these
+	axiomatic beliefs to be self-evident in that we have tested
+	and tried their soundness to an extend which adequately
+	satisfies our needs. Such an axiom may be humans require
+	oxygen to sustain life. From these axioms, these truths, we
+	are able make decisions; to establish and evolve principles,
+	morals, and ethics which we use to govern and justify our
+	actions.
+      </p>
+
+      <p>When we leverage enthusiasm to attack a problem, we are
+	acting under a personal bias which doesn't necessarily follow
+	from our axioms. It's like eating chocolate cake because we
+	enjoy it, even if doing so is detremental to our heath. Such
+	behaviour can cause our knowledge bases to be poluted (in the
+	form of the mutation or introduction of axioms). An
+	enthusiastic video game player may be swayed to evolve an
+	axiomatic understanding that gaming is intrinsicly a good use
+	of time, for instance.
+      </p>
+      <p>That isn't to say enthusiasm is a bad thing. It is rather, a
+	form of stochasticism which allows us to be unique
+	individuals, resulting in the exploration of topics which
+	interest us. However, like any scientific experiment, our goal
+	when modifying our principle system should be to understand
+	each modification to our system, as well as the implications
+	that come with it. When too many changes occur at once, it
+	becomes challenging to verify and affirm our existing
+	axioms. As a result, I believe it perimount that one learn to
+	control their enthusiasm and to seek a balance, as to maximize
+	its benefits without jeopardizing one's principles.
+	</p>
+      
+      <p>One of my life goals is to strive to live the life of a white
+	hat. I ground myself by the following doctrine:</p>
+
+      <p class="prefont">
+	<strong>Above all</strong>, hack for the great benefit of others.<br/>
+	Struggle not to obtain freedoms from your oppressor,<br/>
+	hack to create freedoms for the oppressed.<br/>
+	Pay for freedom with righteous hacks, not in blood.<br/>
+	Hack abstractions such that mutually exclusive ideologies may peacefully coincide.<br/>
+	Hack the present into obsolescence.<br/>
+	Hack the past towards the future.<br/>
+	Hack together, not each other<br/><br/>	
+	And don't be afraid to get your hat a little dirty.
+      </p>
+    </div>
+
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>
