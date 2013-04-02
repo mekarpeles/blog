@@ -1,0 +1,48 @@
+    <div class="container">
+      <h1 class="repos">'No space left of device' but disk isn't full?</h1>
+      <p class="by">Mek, September 19, 2012</p>
+      <hr/>
+
+      <h2>Possibility 1: Out of inodes</h2>
+      <p>
+	One possible reason for encountering a 'No space left on
+	device' error is your machine has run out of
+	available <a href="http://en.wikipedia.org/wiki/Inode">inodes</a>.
+      </p>
+
+      <h3>What is an inode?</h3>
+      <p>
+	Many Unix file systems use data structures called inodes whose
+	purpose is to store file metadata. Each file refers to its
+	inode data via an i-number (inode number). The inode data
+	structure typically stores information like about files and
+	directories (folders), such as file ownership, access mode
+	(read, write, execute permissions), and file type.
+      </p>
+
+      <p>
+	On many types of file system implementations, the maximum
+	number of inodes is fixed at file system creation, limiting
+	the maximum number of files the file system can hold. A
+	typical allocation heuristic for inodes in a file system is
+	one percent of total size. <a href="http://en.wikipedia.org/wiki/Inode#Details">[1]</a><a href="[http://en.wikipedia.org/wiki/Inode#Practical_considerations]"[2]</a>
+      </p>
+
+      <code>sudo find . -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n</code>	
+
+      <p>tune2fs -m</p>
+      <p>df -i</p>
+
+      <p>If you have recently deleted file</p>
+      <p>
+	<code>
+	  $# post about df -i space (inodes)
+	  $# post about 
+	</code>
+      </p>
+      <p>Additional resource</p>
+      <ul>
+	<li><a href="http://superuser.com/questions/310076/linux-no-space-left-on-device-error-with-50-free-space">(superuser.com) Linux: no space left on device error with 50% free space</a></li>
+      </ul>
+
+    </div>
