@@ -1,0 +1,14 @@
+
+Hardware:
+| Rasperry Pi | ~$35                     | Computer the size of a credit card, 512MB RAM       | http://www.raspberrypi.org/faqs     |                                                                                                         |
+| Square      | Free + Free shipping     | Credit card reader for mobile devices (phone, ipad) | https://squareup.com/               |                                                                                                         |
+| Leap        | ~$69.99 + $5.99 shipping | Hands free computing with gestures                  | https://leapmotion.com/preorder/new |                                                                                                         |
+| zspace      | $6,000                   | Iteract with computers using 3d technology          | http://zspace.com/                  | http://gfxspeak.com/2011/12/09/infinite-z-launches-zspace-virtual-holographic-3d-display-for-designers/ |
+| miyo        | $70                      |                                                     |                                     |                                                                                                         |
+
+iphone Apps:
+| 360 Panorama | $0.99 |              | https://itunes.apple.com/us/app/360-panorama/id377342622?mt=8 | Jessy Exum              |
+| Cycloramic   |       |              | http://cycloramic.com/                                        | Alex Peake & Ross Colby |
+| Word Lens    | Free  | Quest Visual | https://itunes.apple.com/us/app/word-lens/id383463868         |                         |
+
+  
